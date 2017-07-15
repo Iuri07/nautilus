@@ -15,7 +15,7 @@ int main( )
 
     while(true){
 
-        Mat srcVideoFrame, outVideoFrame, grayFrame, edge;
+        Mat srcVideoFrame, outVideoFrame, grayFrame;
 
         cam >> srcVideoFrame;
 
@@ -29,7 +29,6 @@ int main( )
 
         Canny(grayFrame, outVideoFrame, 50, 150, 3);
 
-        //edge.convertTo(outVideoFrame, CV_8U);
         namedWindow("Imagem com Canny Edge", CV_WINDOW_AUTOSIZE);
         imshow("Imagem com Canny Edge", outVideoFrame); //shows filtered image
 
